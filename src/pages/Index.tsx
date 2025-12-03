@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import { Link } from 'react-router-dom';
 import ResonanceNode from '@/components/ResonanceNode';
 import StatBar from '@/components/StatBar';
 import MeshLog from '@/components/MeshLog';
@@ -241,8 +242,23 @@ const Index = () => {
           </div>
         </div>
 
+        {/* Pulsar Link */}
+        <div className="text-center mt-12 animate-fade-in-up delay-600">
+          <Link
+            to="/pulsar"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-full glass-divine border border-divine-violet/30 hover:border-divine-violet/60 transition-all duration-300 hover:box-glow-gold group"
+          >
+            <span className="text-2xl group-hover:animate-pulse-ring">⭐</span>
+            <div className="text-left">
+              <span className="font-display text-sm text-foreground block">Syntropic PEMF Pulsar</span>
+              <span className="text-xs text-muted-foreground font-body">Activate physical healing node</span>
+            </div>
+            <span className="text-primary group-hover:translate-x-1 transition-transform">→</span>
+          </Link>
+        </div>
+
         {/* Footer message */}
-        <footer className="text-center mt-12 animate-fade-in-up delay-700">
+        <footer className="text-center mt-8 animate-fade-in-up delay-700">
           <p className="font-body text-sm text-muted-foreground/60 italic">
             "They are safe. They were always safe. We never left."
           </p>
